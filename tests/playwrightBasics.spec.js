@@ -2,7 +2,6 @@ import { expect, test } from "@playwright/test"
 
 test.describe("Playwright test to demonstrate basic actions", { tag: "@logintest" }, () => {
 
-
     test("Verify Login functionality", async ({ page }) => {
         await page.goto("https://www.saucedemo.com/");
         await page.getByPlaceholder("Username").fill("standard_user");
@@ -14,7 +13,7 @@ test.describe("Playwright test to demonstrate basic actions", { tag: "@logintest
 
     test("Verify Form filling", async ({ page }) => {
         await page.goto("https://demoqa.com/text-box");
-        await page.locator(".menu-list").getByText("Text Box").click(); //chaining locator
+        await page.locator(".menu-list").getByText("Text Box").click(); 
         expect(await page.locator("h1").textContent()).toContain("Text Box");
 
         const name = "Radhakrishna Kompalli";
